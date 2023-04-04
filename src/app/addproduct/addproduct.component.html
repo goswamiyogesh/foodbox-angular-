@@ -1,0 +1,14 @@
+<div class = "container-fluid col-md-6 offset-md-3"></div>
+<form>
+    <table class="table table-hover" style="text-align: center;">
+    <tr style="text-shadow: 0cqh; text-size-adjust:50px;">
+     <td><i class="fa fa-cutlery" aria-hidden="true">  Food Name:</i></td><td><input type="text" name="foodname" [(ngModel)]="product.foodname"></td></tr>
+    <tr><td><i class="fa fa-lemon" aria-hidden="true">  Category:</i></td><td><input type="text" name="category"[(ngModel)]="product.category" ></td></tr>
+    <tr><td><i class="fa fa-inr" aria-hidden="true"> Food Price:</i></td><td><input type="text" name="foodprice" [(ngModel)]="product.foodprice"></td></tr>
+    <tr><td><i class="fa fa-upload" aria-hidden="true">  Image-Path:</i></td><td><input type="text" name="imagePath" [(ngModel)]="product.imagePath"></td></tr>
+    
+   <tr><td>
+ <button type="submit" (click)="addProduct()" class="btn btn-primary btn-lg">Add This Product Now</button>
+   </td></tr>
+</table>
+    </form>

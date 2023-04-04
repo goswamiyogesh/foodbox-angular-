@@ -1,0 +1,15 @@
+<h1 style="background-image: url('./assets/wallpaper.jpg');text-align: center; height: 200px;  font-size:100; "></h1>
+<br>
+  <h3  style="color:red ;">{{message}}</h3>
+<div class="media-body">
+    <form>
+      <table class="table table-striped">
+      <tr><td>Username:</td><td><input type="text" name="username" [(ngModel)]="username"></td></tr>
+      <tr><td>Password:</td><td><input type="password" name="password" [(ngModel)]="password"></td></tr>
+     <tr><td>
+   <button type="submit" (click)="loginNow()" class="btn btn-primary btn-lg">Login</button>
+     </td></tr>
+  </table>
+      </form>
+  </div>
+  

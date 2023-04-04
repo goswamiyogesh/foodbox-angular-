@@ -1,0 +1,18 @@
+<h3  style="color:red ;">{{message}}</h3>
+<div class = "container-fluid col-md-6 offset-md-3">
+    <h2 style="background-color:burlywood; text-align: center; text-size-adjust: 500;"><i>Hii Users,Register Here!!</i></h2>
+    <form>
+        <table class="table table-hover" style="text-align: center;">
+        <tr><td>Name</td><td><input type="text" name="uname" [(ngModel)]="user.name"></td></tr>
+        <tr><td>Email</td><td><input type="text"  name="email" [(ngModel)]="user.email"></td></tr>
+         <tr><td>Username</td><td><input type="text" name="name" [(ngModel)]="user.username"></td></tr>
+        <tr><td>Password</td><td><input type="text" name="password" [(ngModel)]="user.password"></td></tr>
+    
+        
+       <tr><td>
+     <button type="submit" (click)="addUser()" class="btn btn-primary btn-lg">Register</button>
+       </td></tr>
+    </table>
+        </form>
+    
+</div>

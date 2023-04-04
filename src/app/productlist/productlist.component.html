@@ -1,0 +1,38 @@
+Enter the foodname for search <input type="text" name="foodname" [(ngModel)]="foodname">
+<button (click)="getAllProductByFoodname()">search</button>
+<br>
+<br>
+
+
+Enter the category for search <input type="text" name="category" [(ngModel)]="category">
+<button (click)="getAllProductByCategory()">search</button>
+<br>
+<br>
+
+<h1>Product List</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th><i class="fa fa-id-card"></i>Id</th>
+            <th><i class="fa fa-user"></i>FoodName</th>
+            <th><i class="fa fa-envelope"></i>FoodPrice</th>
+            <th><i class="fa fa-globe">Category</i></th>
+            <th><i class="fa fa-upload"></i>ImagePath</th>
+            <th><i class="fa fa-pen"></i>Edit Details</th>
+            <th><i class="fa fa-trash"></i>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.foodname}}</td>
+            <td>{{p.foodprice}}</td>
+            <td>{{p.category}}</td>
+            <td> <a href="/details/{{p.id}}"><button class="btn btn-primary"><i class="=fa-solid fa-eye"></i>View</button></a> </td>
+            <td><a routerLink="/edit/{{p.id}}">
+                <button class="btn btn-warning"> <i class="=fa-solid fa-pen"></i>Edit</button></a></td>
+            <td><button type="button"(click)='DeleteProductById(p.id)' class="btn btn-danger"><i class="fa-solid fa-trash"></i>Delete</button></td>
+        </tr>
+    </tbody>
+</table>

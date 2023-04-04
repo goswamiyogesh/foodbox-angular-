@@ -1,0 +1,18 @@
+Enter the email for search <input type="text" name="email" [(ngModel)]="email">
+<button (click)="getALLUserByEmail()">search</button>
+<br>
+<br>
+
+
+<h1><i>List of Users </i></h1>
+<table border="1">
+<tr><th>Id</th><th>Name</th><th>Email</th><th>Username</th><th>Password</th></tr>
+<tr *ngFor="let user of users">
+<td>{{user.id}}</td>
+<td>{{user.name}}</td>
+<td>{{user.email}}</td>
+<td>{{user.username}}</td>
+<td>{{user.password}}</td>
+</tr>
+</table>
+

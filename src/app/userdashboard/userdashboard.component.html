@@ -1,0 +1,43 @@
+<h1 style="text-align: center; color: brown;">Welcome User</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+        <img routerLink="/products" class="logo" src="./assets/logofoodbox.jpg" alt="">
+        <strong class="header-title">The Foodbox</strong>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn bthHead" routerLink="/productlist"><i class="fas fa-users fa-lg"></i>Product list</button>
+            </li>
+
+            <li class="nav-item">
+                <button class="btn bthHead" routerLink="/registeruser"><i class="fas fa-users fa-lg"></i> registeruser</button>
+            </li>
+
+            <li class="nav-item">
+                <button class="btn bthHead" routerLink="/productdetails"><i class="fas fa-users fa-lg"></i> Productdetails</button>
+            </li>
+            
+            <li class="nav-item">
+                <button class="btn bthHead float-right" (click)="userLogout()">Logout</button>
+            </li>
+        </ul>
+    </div>
+</nav><div style="text-align: center;">
+    <button (click) = goToCart() class = "btn btn-info"><i class="fa fa-cart-plus" aria-hidden="true">   Go To Cart</i></button>
+</div>
+<br><br>
+<table class="table" border="1">
+
+    <tr><th>Id</th><th>ImagePath</th><th>FoodName</th><th>Category</th><th>FoodPrice</th></tr>
+    <tr *ngFor="let p of Products">
+    <td>{{p.id}}</td>
+    <td><img src="{{p.imagePath}}" style="height: 120; width: 200;"></td>
+    <td>{{p.foodname}}</td>
+    <td>{{p.category}}</td>
+    <td>{{p.foodprice}}</td>
+    <td> <td> <button (click) = "addProductToCart(p.id)" class = "btn btn-success"><i class="fa fa-cart-plus" aria-hidden="true">  Add To Cart</i></button></td></tr>
+    </table>
+    
+    
+    <h3  style="color:red ;">{{message}}</h3>
